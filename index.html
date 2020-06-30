@@ -1,82 +1,92 @@
 <!DOCTYPE html>
+<!--https://marina-ferreira.github.io/tutorials/js/memory-game/-->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/angel.png" alt="angel emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/angel.png" alt="angel emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/lol.png" alt="lol emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/lol.png" alt="lol emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/sick.png" alt="sick emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/sick.png" alt="sick emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/heart-eyes.png" alt="heart eyes emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/heart-eyes.png" alt="heart eyes emoji" width="100px" height="auto">
-    </div>
+    <section class="memory-game">
 
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/cool.png" alt="cool emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/cool.png" alt="cool emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/smart.png" alt="cool emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/smart.png" alt="cool emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/surprised.png" alt="cool emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/surprised.png" alt="cool emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/hot.png" alt="cool emoji" width="100px" height="auto">
-    </div>
-    <div class="memory-card">
-        <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        <img class="front-face" src="images/hot.png" alt="cool emoji" width="100px" height="auto">
-    </div>
+        <div class="memory-card" data-framework="angel">
+            <img class="front-face" src="images/angel.png" alt="angel emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="angel">
+            <img class="front-face" src="images/angel.png" alt="angel emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="lol">
+            <img class="front-face" src="images/lol.png" alt="lol emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="lol">
+            <img class="front-face" src="images/lol.png" alt="lol emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <br>
 
-    </div>
+
+        <div class="memory-card" data-framework="sick">
+            <img class="front-face" src="images/sick.png" alt="sick emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="sick">
+            <img class="front-face" src="images/sick.png" alt="sick emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="heart-eyes">
+            <img class="front-face" src="images/heart-eyes.png" alt="heart eyes emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="heart-eyes">
+            <img class="front-face" src="images/heart-eyes.png" alt="heart eyes emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <br>
+
+
+        <div class="memory-card" data-framework="cool">
+            <img class="front-face" src="images/cool.png" alt="cool emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="cool">
+            <img class="front-face" src="images/cool.png" alt="cool emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="smart">
+            <img class="front-face" src="images/smart.png" alt="cool emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="smart">
+            <img class="front-face" src="images/smart.png" alt="cool emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <br>
+
+
+        <div class="memory-card" data-framework="surprised">
+            <img class="front-face" src="images/surprised.png" alt="cool emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="surprised">
+            <img class="front-face" src="images/surprised.png" alt="cool emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="hot">
+            <img class="front-face" src="images/hot.png" alt="cool emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+        <div class="memory-card" data-framework="hot">
+            <img class="front-face" src="images/hot.png" alt="cool emoji" width="100px" height="auto">
+            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
+        </div>
+
+    </section>
 
     <script src="app.js"></script>
 </body>
