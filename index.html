@@ -1,92 +1,41 @@
 <!DOCTYPE html>
-<!--https://marina-ferreira.github.io/tutorials/js/memory-game/-->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-    <section class="memory-game">
 
-        <div class="memory-card" data-framework="angel">
-            <img class="front-face" src="images/angel.png" alt="angel emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="angel">
-            <img class="front-face" src="images/angel.png" alt="angel emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="lol">
-            <img class="front-face" src="images/lol.png" alt="lol emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="lol">
-            <img class="front-face" src="images/lol.png" alt="lol emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <br>
+    <div class="row">
+        <div data-emoji="angel" class="card angel blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="smart" class="card smart blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="heart-eyes" class="card heart-eyes blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="lol" class="card lol blank" onclick="onCardClicked(event)"></div>
 
-
-        <div class="memory-card" data-framework="sick">
-            <img class="front-face" src="images/sick.png" alt="sick emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="sick">
-            <img class="front-face" src="images/sick.png" alt="sick emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="heart-eyes">
-            <img class="front-face" src="images/heart-eyes.png" alt="heart eyes emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="heart-eyes">
-            <img class="front-face" src="images/heart-eyes.png" alt="heart eyes emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <br>
-
-
-        <div class="memory-card" data-framework="cool">
-            <img class="front-face" src="images/cool.png" alt="cool emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="cool">
-            <img class="front-face" src="images/cool.png" alt="cool emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="smart">
-            <img class="front-face" src="images/smart.png" alt="cool emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="smart">
-            <img class="front-face" src="images/smart.png" alt="cool emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <br>
-
-
-        <div class="memory-card" data-framework="surprised">
-            <img class="front-face" src="images/surprised.png" alt="cool emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="surprised">
-            <img class="front-face" src="images/surprised.png" alt="cool emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="hot">
-            <img class="front-face" src="images/hot.png" alt="cool emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-        <div class="memory-card" data-framework="hot">
-            <img class="front-face" src="images/hot.png" alt="cool emoji" width="100px" height="auto">
-            <img class="back-face" src="images/blank.png" alt="memory card" width="100px" height="auto">
-        </div>
-
-    </section>
+    </div>
+    <div class="row">
+        <div data-emoji="hot" class="card hot blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="cool" class="card cool blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="sick" class="card sick blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="surprised" class="card surprised blank" onclick="onCardClicked(event)"></div>
+    </div>
+    <div class="row">
+        <div data-emoji="smart" class="card smart blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="lol" class="card lol blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="angel" class="card angel blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="surprised" class="card surprised blank" onclick="onCardClicked(event)"></div>
+    </div>
+    <div class="row">
+        <div data-emoji="hot" class="card hot blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="sick" class="card sick blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="cool" class="card cool blank" onclick="onCardClicked(event)"></div>
+        <div data-emoji="heart-eyes" class="card heart-eyes blank" onclick="onCardClicked(event)"></div>
+    </div>
 
     <script src="app.js"></script>
 </body>
