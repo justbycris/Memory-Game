@@ -1,47 +1,72 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.row {
+    text-align: center;
 }
 
-body {
-    height: auto;
-    display: flex;
-    background: #ffffff;
-}
-
-.memory-game {
-    width: 100%;
-    height: auto;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.memory-card {
-    width: 100%;
-    height: auto;
-    background-color: #1e1e1e;
+.card {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #a0c4ff;
     cursor: pointer;
-    position: relative;
-    transform-style: preserve-3d;
-    transform: scale(1);
 }
 
-.memory-card:active {
-    transform: scale(0.97);
-    transition: transform .2s;
+.card.done {
+    cursor: default;
 }
 
-.front-face,
-.back-face {
-    padding: 20px;
-    position: absolute;
-    border-radius: 5px;
-    background: #1e1e1e;
+.card.done:hover {
+    cursor: default;
+    box-shadow: none;
+    border: none;
 }
 
 .card:hover {
-    outline: 4px solid fuchsia;
-    outline-offset: -4px;
+    border: 2px solid #ff61ff;
+    box-shadow: inset 0px 0px 0px 5px #9bf6ff;
+    box-sizing: border-box;
+}
+
+.angel {
+    background-image: url(images/angel.png);
+    background-size: 100px;
+}
+
+.cool {
+    background-image: url(images/cool.png);
+    background-size: 100px;
+}
+
+.lol {
+    background-image: url(images/lol.png);
+    background-size: 100px;
+}
+
+.smart {
+    background-image: url(images/smart.png);
+    background-size: 100px;
+}
+
+.surprised {
+    background-image: url(images/surprised.png);
+    background-size: 100px;
+}
+
+.sick {
+    background-image: url(images/sick.png);
+    background-size: 100px;
+}
+
+.hot {
+    background-image: url(images/hot.png);
+    background-size: 100px;
+}
+
+.heart-eyes {
+    background-image: url(images/heart-eyes.png);
+    background-size: 100px;
+}
+
+.blank {
+    background-image: url(images/blank.png);
+    background-size: 100px;
 }
