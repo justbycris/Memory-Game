@@ -1,67 +1,43 @@
-const cards = document.querySelectorAll('.memory-card');
+let clickedCard = null;
+let preventClick = false;
+let combosFound = 0;
 
-let hasFlippedCard = false;
-let lockBoard = false;
-let firstCard, secondCard;
 
-function flipCard() {
-    if (lockBoard) return;
-    if (this === firstCard) return;
 
-    this.classList.add('flip');
+function onCardClicked(e) {
+    const target = e.currentTarget;
 
-    if (!hasFlippedCard) {
-        // first click
-        hasFlippedCard = true;
-        firstCard = this;
-
+    if (preventClick || target === clickedCard || target.className.includes('done')) {
         return;
     }
 
-    // second click
-    secondCard = this;
+    target.className = target.className
+        .replace('blank', '')
+        .trim();
+    target.className += ' done';
 
-    checkForMatch();
+    console.log(target.getAttribute('data-emoji'));
+
+    if (!clickedCard) {
+        //if we haven't clicked a card, keep track of the card, display it's color
+        clickedCard = target;
+    } else if (clickedCard) {
+        //if we have already clicked a card, check if thenew card matches the old card color
+
+        if (clickedCard.getAttribute('data-emoji') !== target.getAttribute('data-emoji')) {
+            preventClick = true;
+            setTimeout(() => {
+                clickedCard.className = clickedCard.className.replace('done', '').trim() + ' blank';
+                target.className = target.className.replace('done', '').trim() + ' blank';
+                clickedCard = null;
+                preventClick = false;
+            }, 500);
+        } else {
+            combosFound++;
+            clickedCard = null;
+            if (combosFound === 8) {
+                alert('You WIN!');
+            }
+        }
+    }
 }
-
-function checkForMatch() {
-    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-
-    isMatch ? disableCards() : unflipCards();
-}
-
-function disableCards() {
-
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
-
-    resetBoard();
-
-    return alert('You found a match!');
-
-}
-
-function unflipCards() {
-    lockBoard = true;
-
-    setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
-
-        resetBoard();
-    }, 1500);
-}
-
-function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-}
-
-(function shuffle() {
-    cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 12);
-        card.style.order = randomPos;
-    });
-})();
-
-cards.forEach(card => card.addEventListener('click', flipCard));
