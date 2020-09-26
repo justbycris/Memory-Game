@@ -10,32 +10,36 @@
 </head>
 
 <body>
+    <div id="message">Memory Game</div>
+    <div class="container">
+        <div class="row">
+            <div data-emoji="angel" class="card angel blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="smart" class="card smart blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="heart-eyes" class="card heart-eyes blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="lol" class="card lol blank" onclick="onCardClicked(event)"></div>
 
-    <div class="row">
-        <div data-emoji="angel" class="card angel blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="smart" class="card smart blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="heart-eyes" class="card heart-eyes blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="lol" class="card lol blank" onclick="onCardClicked(event)"></div>
+        </div>
+        <div class="row">
+            <div data-emoji="hot" class="card hot blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="cool" class="card cool blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="sick" class="card sick blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="surprised" class="card surprised blank" onclick="onCardClicked(event)"></div>
+        </div>
+        <div class="row">
+            <div data-emoji="smart" class="card smart blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="lol" class="card lol blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="angel" class="card angel blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="surprised" class="card surprised blank" onclick="onCardClicked(event)"></div>
+        </div>
+        <div class="row">
+            <div data-emoji="hot" class="card hot blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="sick" class="card sick blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="cool" class="card cool blank" onclick="onCardClicked(event)"></div>
+            <div data-emoji="heart-eyes" class="card heart-eyes blank" onclick="onCardClicked(event)"></div>
+        </div>
+    </div>
+    <button type="submit" id="btngame" onclick="startAgain()">Play Again</button>
 
-    </div>
-    <div class="row">
-        <div data-emoji="hot" class="card hot blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="cool" class="card cool blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="sick" class="card sick blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="surprised" class="card surprised blank" onclick="onCardClicked(event)"></div>
-    </div>
-    <div class="row">
-        <div data-emoji="smart" class="card smart blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="lol" class="card lol blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="angel" class="card angel blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="surprised" class="card surprised blank" onclick="onCardClicked(event)"></div>
-    </div>
-    <div class="row">
-        <div data-emoji="hot" class="card hot blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="sick" class="card sick blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="cool" class="card cool blank" onclick="onCardClicked(event)"></div>
-        <div data-emoji="heart-eyes" class="card heart-eyes blank" onclick="onCardClicked(event)"></div>
-    </div>
 
     <script src="app.js"></script>
 </body>
