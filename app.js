@@ -22,7 +22,7 @@ function onCardClicked(e) {
         //if we haven't clicked a card, keep track of the card, display it's color
         clickedCard = target;
     } else if (clickedCard) {
-        //if we have already clicked a card, check if thenew card matches the old card color
+        //if have already clicked a card, check if the new card matches the old card color
 
         if (clickedCard.getAttribute('data-emoji') !== target.getAttribute('data-emoji')) {
             preventClick = true;
@@ -36,8 +36,33 @@ function onCardClicked(e) {
             combosFound++;
             clickedCard = null;
             if (combosFound === 8) {
-                alert('You WIN!');
+                document.getElementById('message').innerHTML = 'YOU WON!';
             }
         }
     }
+}
+
+
+
+// Fucntion to shuffle the array content 
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+
+        // Generate random number  
+        var j = Math.floor(Math.random() * (i + 1));
+
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    return array;
+}
+
+// Function to show the result 
+function show() {
+    var arr = [1, 2, 3, 4, 5, 6, 7]
+    var arr1 = shuffleArray(arr)
+
+    document.write("After shuffling: ", arr1)
 }
